@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - SiPasien</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <h2>SiPasien</h2>
+            <p>Pelayanan Pasien</p>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="#data-pasien">
+                Data Pasien
+            </a>
+
+            <a href="#pendaftaran">
+                Pendaftaran
+            </a>
+
+            <a href="#antrian">
+                Nomor Antrian
+            </a>
+
+            <a href="#riwayat">
+                Riwayat Pendaftaran
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-content">
+
+        <!-- TOP BAR -->
+        <div class="dashboard-top">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Selamat datang di Sistem Informasi Pelayanan Pasien.</p>
+            </div>
+
+            <div class="user-info">
+                <span>👤</span>
+                <strong>Octavio</strong>
+            </div>
+
+        </div>
+
+
+        <!-- WELCOME -->
+        <section class="welcome-box">
+
+            <h2>Selamat Datang, Octavio!</h2>
+
+            <p>
+                Kelola data pasien dan pendaftaran pelayanan
+                melalui dashboard SiPasien.
+            </p>
+
+        </section>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <div class="card-icon">👤</div>
+
+                <div>
+                    <p>Total Pasien</p>
+                    <h2 id="totalPasien">0</h2>
+                </div>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">📋</div>
+
+                <div>
+                    <p>Total Pendaftaran</p>
+                    <h2 id="totalPendaftaran">0</h2>
+                </div>
+            </div>
+
+
+            <div class="dashboard-card">
+                <div class="card-icon">🎫</div>
+
+                <div>
+                    <p>Nomor Antrian</p>
+                    <h2>A-023</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- CRUD DATA PASIEN -->
+        <section class="crud-section" id="data-pasien">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Data Pasien</h2>
+                    <p>Kelola data pasien.</p>
+                </div>
+
+                <button class="add-button" onclick="tambahPasien()">
+                    + Tambah Pasien
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NIK</th>
+                            <th>Nama</th>
+                            <th>No. Telepon</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelPasien">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- CRUD PENDAFTARAN -->
+        <section class="crud-section" id="pendaftaran">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Data Pendaftaran Pasien</h2>
+                    <p>Kelola data pendaftaran pasien.</p>
+                </div>
+
+                <button class="add-button" onclick="tambahPendaftaran()">
+                    + Tambah Pendaftaran
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>No</th>
+                            <th>ID Pendaftaran</th>
+                            <th>Nama Pasien</th>
+                            <th>Tanggal</th>
+                            <th>Pelayanan</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelPendaftaran">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANTRIAN -->
+        <section class="crud-section" id="antrian">
+
+            <h2>Nomor Antrian</h2>
+
+            <div class="queue-box">
+
+                <p>Nomor Antrian Anda</p>
+
+                <h1>A-023</h1>
+
+                <p>Silakan menunggu sampai nomor Anda dipanggil.</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIWAYAT -->
+        <section class="crud-section" id="riwayat">
+
+            <h2>Riwayat Pendaftaran</h2>
+
+            <p>
+                Riwayat pendaftaran pasien akan ditampilkan
+                pada bagian ini.
+            </p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 SiPasien - Sistem Informasi Pendaftaran dan Pelayanan Pasien
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
