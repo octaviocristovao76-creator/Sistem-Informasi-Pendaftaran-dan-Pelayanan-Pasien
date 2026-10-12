@@ -356,3 +356,62 @@ document.addEventListener("DOMContentLoaded", function() {
     tampilkanPendaftaran();
 
 });
+
+
+/* =========================
+   DOM DAN TOAST BAB 3
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // DOM 1: Mengambil elemen berdasarkan ID
+    const judulLayanan = document.getElementById("judulLayanan");
+
+    // DOM 2: Mengambil beberapa tombol menggunakan querySelectorAll
+    const tombolHero = document.querySelectorAll(".hero-buttons .btn");
+
+    // DOM untuk elemen Toast
+    const toast = document.getElementById("toast");
+
+    // DOM 3: Mengubah teks elemen menggunakan textContent
+    if (judulLayanan) {
+        judulLayanan.textContent = "Layanan Kesehatan SiPasien";
+    }
+
+    // DOM 4: Menambahkan interaksi dengan addEventListener
+    tombolHero.forEach(function (tombol) {
+        tombol.addEventListener("click", function () {
+            tampilkanToast("Anda memilih layanan SiPasien.");
+        });
+    });
+
+    const tombolInfo = document.getElementById("tombolInfo");
+
+    if (tombolInfo) {
+        tombolInfo.addEventListener("click", function () {
+            tampilkanToast(
+                "SiPasien menyediakan layanan pendaftaran pasien secara online."
+            );
+        });
+    }
+
+});
+
+
+// Menampilkan Toast
+function tampilkanToast(pesan) {
+
+    const toast = document.getElementById("toast");
+
+    if (!toast) {
+        return;
+    }
+
+    toast.textContent = pesan;
+    toast.classList.add("show");
+
+    // Menghilangkan Toast setelah 3 detik
+    setTimeout(function () {
+        toast.classList.remove("show");
+    }, 3000);
+}
