@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SiPasien - Pendaftaran dan Pelayanan Pasien</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <h2>SiPasien</h2>
+            <span>Sehat Bersama, Lebih Mudah</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.php">Home</a>
+            <a href="#">Pelayanan</a>
+            <a href="#">Informasi</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO / MENU UTAMA -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">Sistem Informasi</p>
+
+            <h1>
+                Pendaftaran dan<br>
+                Pelayanan Pasien
+            </h1>
+
+            <h2>Berbasis Web</h2>
+
+            <p class="description">
+                Dapatkan informasi dan layanan kesehatan
+                dengan mudah melalui sistem berbasis web.
+            </p>
+            
+            <button type="button" id="tombolInfo" class="btn primary">
+            Lihat Informasi
+            </button>
+
+            <br><br>
+
+            <div class="hero-buttons">
+            <a href="register.php" class="btn primary" id="tombolDaftar">
+            Daftar Sekarang
+            </a>
+
+            <a href="login.php" class="btn secondary" id="tombolLogin">
+            Login
+            </a>
+            </div>
+
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img src="images/dokter.jpg" alt="Dokter">
+
+        </div>
+
+    </section>
+
+
+    <!-- LAYANAN -->
+    <section class="layanan">
+
+        <h2 id="judulLayanan">Layanan Kami</h2>
+
+        <p class="layanan-description">
+            Berbagai layanan kesehatan untuk mendukung kebutuhan Anda.
+        </p>
+
+
+        <div class="card-container">
+
+            <!-- CARD 1 -->
+            <div class="card">
+
+                <div class="icon">
+                    👤
+                </div>
+
+                <h3>Pendaftaran Pasien</h3>
+
+                <p>
+                    Daftar pasien secara online dengan mudah.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="card">
+
+                <div class="icon">
+                    📅
+                </div>
+
+                <h3>Jadwal Dokter</h3>
+
+                <p>
+                    Lihat jadwal dokter yang tersedia.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card">
+
+                <div class="icon">
+                    🎫
+                </div>
+
+                <h3>Nomor Antrian</h3>
+
+                <p>
+                    Dapatkan nomor antrian secara online.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+            <div class="card">
+
+                <div class="icon">
+                    📋
+                </div>
+
+                <h3>Riwayat Pemeriksaan</h3>
+
+                <p>
+                    Lihat riwayat pemeriksaan pasien.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 SiPasien - Sistem Informasi Pendaftaran dan Pelayanan Pasien
+        </p>
+
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
